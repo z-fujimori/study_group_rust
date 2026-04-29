@@ -1,0 +1,1 @@
+/Users/fujim/productions/project/study_group_rust/rust_with_atcoder/atcoder_practice/abc330_a/target/debug/abc330_a: /Users/fujim/productions/project/study_group_rust/rust_with_atcoder/atcoder_practice/abc330_a/src/main.rs
