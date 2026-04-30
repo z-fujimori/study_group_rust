@@ -160,15 +160,32 @@ cargo run < input.txt
 --- 
 
 # 問題を解いてみよう！
+mut, if, for
 
 AtCoder ABCコンテスト 330 A問題
 https://atcoder.jp/contests/abc330/tasks/abc330_a
 
+---
 
---- 
+回答/別解(for)
 
+---
 
+# 文字列操作に挑戦！
+所有権, 借用, String
 
+AtCoder ABCコンテスト 149 A問題
+https://atcoder.jp/contests/abc149/tasks/abc149_a
+
+---
+
+回答/別解
+
+---
+
+# RustのStringについて
+
+---
 
 
 

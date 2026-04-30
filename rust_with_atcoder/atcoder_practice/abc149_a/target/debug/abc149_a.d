@@ -1,0 +1,1 @@
+/Users/fujim/productions/project/study_group_rust/rust_with_atcoder/atcoder_practice/abc149_a/target/debug/abc149_a: /Users/fujim/productions/project/study_group_rust/rust_with_atcoder/atcoder_practice/abc149_a/src/main.rs
