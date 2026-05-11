@@ -4,12 +4,12 @@ fn main() {
     input! {
         n: i32,
         l: i32,
-        list_a: [i32; n],
+        a_list: [i32; n],
     }
-
+    
     let mut count = 0;
 
-    for a in &list_a {
+    for a in &a_list {
         if a >= l {
             count += 1;
         }
