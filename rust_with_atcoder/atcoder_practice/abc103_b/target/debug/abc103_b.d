@@ -1,0 +1,1 @@
+/Users/tfujimori/productions/study/rust/study_group_rust/rust_with_atcoder/atcoder_practice/abc103_b/target/debug/abc103_b: /Users/tfujimori/productions/study/rust/study_group_rust/rust_with_atcoder/atcoder_practice/abc103_b/src/main.rs
