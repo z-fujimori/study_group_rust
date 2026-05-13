@@ -25,15 +25,17 @@
 
 ## VSCode + 拡張機能
 
-### VSCodeのインストール
-下記のサイトの `Download for Mac` をクリックしてインストール
+1. VSCodeのインストール
+    
+    下記のサイトの `Download for Mac` をクリックしてインストール
 
-https://code.visualstudio.com/
+    https://code.visualstudio.com/
 
 
-### Rust拡張機能のインストール
-インストールする拡張機能
-- rust-analyzer
+2. Rust拡張機能のインストール
+    
+    インストールする拡張機能
+    - rust-analyzer
 
 ![alt text](images/1778442504277.png)
 

@@ -114,7 +114,7 @@ AtCoderの問題を通してRustを学ぶぞ。
 # Hello World
 
 ```bash
-cargo init
+cargo init project_name
 ```
 
 ```rust
@@ -129,18 +129,6 @@ cargo run
 
 ---
 
-# Rustの基本の書き方
-
-- 静的言語(プリミティブ？型について)
-    - i32, f32, u32, usize
-    - String, str, chr
-- 変数宣言
-- for
-- if
-- 標準入力
-
----
-
 # 変数宣言
 
 ```rust
@@ -150,9 +138,9 @@ println!("x:{} y:{}", x, y);
 
 x += 1;
 y += 1;
-println!("x:{} y:{}", x, y);
+println!("x:{} y:{}", x, y); // フォーマットして出力するprintの書き方
 ```
-(↑ フォーマットして出力するprintの書き方)
+
 
 ---
 
@@ -183,6 +171,16 @@ error: could not compile `demo_pro` (bin "demo_pro") due to 1 previous error
 静的型付け/動的型付け言語について説明。
 i32, String型について説明
 
+# Rustの基本の書き方
+
+- 静的言語(プリミティブ？型について)
+    - i32, f32, u32, usize
+    - String, str, chr
+- 変数宣言
+- for
+- if
+- 標準入力
+
 ---
 
 # if文
@@ -211,18 +209,20 @@ for i in 0..5 {
 
 ---
 
-# 標準入力
-
+```bash
+cargo add proconio
+```
 ```rust
-use std::io::input;
+use proconio::input;
+fn main() {
+    input! {
+        n: usize,
+        a_list: [i32; n],
+    }
 
-input! {
-    n: usize,
-    arr: [i32; n],
-}
-
-for i in 0..5 {
-    println!("{}", arr[i]);
+    for a in a_list {
+        println!("{}", a);
+    }
 }
 ```
 ```input.txt
@@ -277,6 +277,17 @@ for a in &a_list {
 
 ---
 
+# 速さについて多言語と比較
+どの問題にするのか未決定
+候補1 abc051_b 
+    - 3重だとTLE(Rust)
+    - 2重だと他の言語でもAC
+⭕️候補2 abc162_c
+    - 一応コードやオーダー的には3重
+    - PythonのみTLE（Rust, PHP, Python, TS, JS）
+
+---
+
 # 所有権・借用について
 代入と束縛(バインド)について
 
@@ -304,33 +315,117 @@ println!("{}", s2);
 
 ---
 
+同じ値を何回も使いたいが、所有権を消費してしまっているのでError（困った）
 
+```rust
+fn print_string(s: String) {
+    println!("{}", s);
+}
+
+fn main() {
+    let s = String::from("Hello, world!"); // "Hello, world!".to_string()でもOK
+    
+    print_string(s);
+    // print_string(s); // エラー: sはprint_stringに所有権が移動しているため、sは使用できない
+}
+```
 
 ---
 
-# 文字列操作に挑戦！
+リファレンス(参照)を借用する
+
+```rust
+fn print_string_ref(s: &str) {
+    println!("{}", s);
+}
+
+fn main() {
+    let s = String::from("Hello, world!"); // "Hello, world!".to_string()でもOK
+    
+    print_string_ref(&s);
+    print_string_ref(&s);
+}
+```
+
+---
+
+(図 p.62)
+
+---
+
+# 問題を解いてみよう！(２)
 所有権, 借用, String
 
 AtCoder ABCコンテスト 149 A問題
 https://atcoder.jp/contests/abc149/tasks/abc149_a
+AtCoder ABCコンテスト 103 B問題
+https://atcoder.jp/contests/abc103/tasks/abc103_b
+
+![alt text](images/1778538551051.png)
+![alt text](images/1778538558407.png)
 
 ---
 
-回答/別解
+# 149Aの回答解説
+
+```rust
+println!("{}{}", t, s);
+```
+
+```rust
+let ans = t + &s;
+println!("{}", ans);
+```
 
 ---
 
-# RustのStringについて
+```rust
+let ans = t + &s;
+println!("{}", ans);
+
+println!("{}", s);
+println!("{}", t); // 所有権を持っていないのでErrorとなる
+```
 
 ---
 
-# 速さの差が出る問題
-どの問題にするのか未決定
-候補1 abc051_b 
-    - 3重だとTLE(Rust)
-    - 2重だと他の言語でもAC
-⭕️候補2 abc162_c
-    - 一応コードやオーダー的には3重
-    - PythonのみTLE（Rust, PHP, Python, TS, JS）
+# Rustの文字列の2項演算について
 
+Strign = String + &str
 
+所有権が動く
+
+---
+
+# 103Bについて
+
+![alt text](images/1778538558407.png)
+
+回転した文字列のパターンについて
+Sを2回繋げると全てのパターンが現れる！
+
+---
+
+# 103Bの回答解説
+
+```rust
+// sをコピーしないと所有権が移ってしまい参照が使えなくなってしまう。
+let ss = s.clone() + &s;
+
+if ss.contains(&t) {
+    println!("Yes");
+} else {
+    println!("No");
+}
+```
+
+---
+
+# まとめ
+
+所有権を中心に学びながら
+Rustで問題を解いてみた
+
+楽しいと思ってもらえたら
+
+AtCoderの成績が全然振るわないので仲間増えたら嬉しいです！
