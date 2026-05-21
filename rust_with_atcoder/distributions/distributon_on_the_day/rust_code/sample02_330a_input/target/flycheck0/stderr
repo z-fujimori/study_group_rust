@@ -1,0 +1,76 @@
+   0.035593250s  INFO prepare_target{force=false package_id=sample02_330a_input v0.1.0 (/Users/tfujimori/productions/study/rust/study_group_rust/rust_with_atcoder/distributions/distributon_on_the_day/rust_code/sample02_330a_input) target="sample02_330a_input"}: cargo::core::compiler::fingerprint: fingerprint error for sample02_330a_input v0.1.0 (/Users/tfujimori/productions/study/rust/study_group_rust/rust_with_atcoder/distributions/distributon_on_the_day/rust_code/sample02_330a_input)/Check { test: false }/TargetInner { name: "sample02_330a_input", doc: true, ..: with_path("/Users/tfujimori/productions/study/rust/study_group_rust/rust_with_atcoder/distributions/distributon_on_the_day/rust_code/sample02_330a_input/src/main.rs", Edition2024) }
+   0.035845833s  INFO prepare_target{force=false package_id=sample02_330a_input v0.1.0 (/Users/tfujimori/productions/study/rust/study_group_rust/rust_with_atcoder/distributions/distributon_on_the_day/rust_code/sample02_330a_input) target="sample02_330a_input"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/tfujimori/productions/study/rust/study_group_rust/rust_with_atcoder/distributions/distributon_on_the_day/rust_code/sample02_330a_input/target/debug/.fingerprint/sample02_330a_input-864f8fd3f00665b7/bin-sample02_330a_input`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: <std::backtrace::Backtrace>::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   7: cargo::ops::cargo_compile::compile_ws
+   8: cargo::ops::cargo_compile::compile_with_exec
+   9: cargo::ops::cargo_compile::compile
+  10: cargo::commands::check::exec
+  11: <cargo::cli::Exec>::exec
+  12: cargo::main
+  13: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  14: std::rt::lang_start::<()>::{closure#0}
+  15: std::rt::lang_start_internal
+  16: _main
+   0.109351333s  INFO prepare_target{force=false package_id=proconio v0.5.0 target="proconio"}: cargo::core::compiler::fingerprint: fingerprint error for proconio v0.5.0/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("proconio", ["lib"], "/Users/tfujimori/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/proconio-0.5.0/src/lib.rs", Edition2018) }
+   0.109404917s  INFO prepare_target{force=false package_id=proconio v0.5.0 target="proconio"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/tfujimori/productions/study/rust/study_group_rust/rust_with_atcoder/distributions/distributon_on_the_day/rust_code/sample02_330a_input/target/debug/.fingerprint/proconio-e9a417a2a8c67512/lib-proconio`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: <std::backtrace::Backtrace>::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   8: cargo::ops::cargo_compile::compile_ws
+   9: cargo::ops::cargo_compile::compile_with_exec
+  10: cargo::ops::cargo_compile::compile
+  11: cargo::commands::check::exec
+  12: <cargo::cli::Exec>::exec
+  13: cargo::main
+  14: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  15: std::rt::lang_start::<()>::{closure#0}
+  16: std::rt::lang_start_internal
+  17: _main
+   0.109996875s  INFO prepare_target{force=false package_id=sample02_330a_input v0.1.0 (/Users/tfujimori/productions/study/rust/study_group_rust/rust_with_atcoder/distributions/distributon_on_the_day/rust_code/sample02_330a_input) target="sample02_330a_input"}: cargo::core::compiler::fingerprint: fingerprint error for sample02_330a_input v0.1.0 (/Users/tfujimori/productions/study/rust/study_group_rust/rust_with_atcoder/distributions/distributon_on_the_day/rust_code/sample02_330a_input)/Check { test: true }/TargetInner { name: "sample02_330a_input", doc: true, ..: with_path("/Users/tfujimori/productions/study/rust/study_group_rust/rust_with_atcoder/distributions/distributon_on_the_day/rust_code/sample02_330a_input/src/main.rs", Edition2024) }
+   0.110015917s  INFO prepare_target{force=false package_id=sample02_330a_input v0.1.0 (/Users/tfujimori/productions/study/rust/study_group_rust/rust_with_atcoder/distributions/distributon_on_the_day/rust_code/sample02_330a_input) target="sample02_330a_input"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/tfujimori/productions/study/rust/study_group_rust/rust_with_atcoder/distributions/distributon_on_the_day/rust_code/sample02_330a_input/target/debug/.fingerprint/sample02_330a_input-ff3f8fe8f24485f7/test-bin-sample02_330a_input`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: <std::backtrace::Backtrace>::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   7: cargo::ops::cargo_compile::compile_ws
+   8: cargo::ops::cargo_compile::compile_with_exec
+   9: cargo::ops::cargo_compile::compile
+  10: cargo::commands::check::exec
+  11: <cargo::cli::Exec>::exec
+  12: cargo::main
+  13: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  14: std::rt::lang_start::<()>::{closure#0}
+  15: std::rt::lang_start_internal
+  16: _main
+    Checking proconio v0.5.0
+    Checking sample02_330a_input v0.1.0 (/Users/tfujimori/productions/study/rust/study_group_rust/rust_with_atcoder/distributions/distributon_on_the_day/rust_code/sample02_330a_input)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.77s

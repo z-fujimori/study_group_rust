@@ -107,6 +107,10 @@ AtCoderの問題を通してRustを学ぶぞ。
 - VSCode + Rust拡張のインストール
 - AtCoderのアカウント作成
 
+```rust
+% cargo version
+cargo 1.95.0 (f2d3ce0bd 2026-03-21)
+```
 <!-- できた人は次のHelloWorldで動作確認 -->
 
 ---

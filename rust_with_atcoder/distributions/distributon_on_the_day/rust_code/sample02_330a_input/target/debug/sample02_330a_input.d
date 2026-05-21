@@ -1,0 +1,1 @@
+/Users/tfujimori/productions/study/rust/study_group_rust/rust_with_atcoder/distributions/distributon_on_the_day/rust_code/sample02_330a_input/target/debug/sample02_330a_input: /Users/tfujimori/productions/study/rust/study_group_rust/rust_with_atcoder/distributions/distributon_on_the_day/rust_code/sample02_330a_input/src/main.rs

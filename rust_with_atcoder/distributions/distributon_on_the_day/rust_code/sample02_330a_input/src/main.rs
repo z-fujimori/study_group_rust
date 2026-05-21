@@ -9,3 +9,10 @@ fn main() {
 
     // ここから問題を解く
 }
+
+
+a b c
+b c a
+c a b
+
+a b c a b c
